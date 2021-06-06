@@ -1,0 +1,10 @@
+class Solution:
+    def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
+        x=set(nums1)
+        y=[]
+        for i in x:
+            if nums1.count(i)<=nums2.count(i):
+                y.extend([i]*nums1.count(i))
+            else:
+                y.extend([i]*nums2.count(i))
+        return y
